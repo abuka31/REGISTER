@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js"></script>
+    <script>
+      // Твои Firebase настройки
+      const firebaseConfig = {
+        apiKey: "AIzaSyC-VQ5NTAAGgA41RKiJrrO14sEg59Iw_uo",
+        authDomain: "register-site-a74a2.firebaseapp.com",
+        projectId: "register-site-a74a2",
+        storageBucket: "register-site-a74a2.firebasestorage.app",
+        messagingSenderId: "162671976919",
+        appId: "162671976919",
+      };
+    
+      // Инициализация Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore(app);
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Регистрация</h1>
+    <form id="register-form">
+      <div class="form-group">
+        <label for="reg-username">Имя пользователя</label>
+        <input type="text" id="reg-username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="reg-password">Пароль</label>
+        <input type="password" id="reg-password" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+    </form>
+    <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
